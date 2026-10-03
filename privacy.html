@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy · Arsenal Daily Bot</title>
+<style>
+  :root { --bg: #ffffff; --fg: #1d1d1f; --muted: #5f6368; --accent: #c8102e; --rule: #e3e3e3; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #141416; --fg: #ececec; --muted: #a0a4ab; --accent: #ff4d5e; --rule: #2c2c30; }
+  }
+  body { background: var(--bg); color: var(--fg); margin: 0;
+         font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 48px 16px 64px; }
+  h1 { font-size: 2rem; margin: 0 0 4px; }
+  h2 { font-size: 1.2rem; margin: 36px 0 8px; padding-top: 12px; border-top: 1px solid var(--rule); }
+  .meta { color: var(--muted); margin: 0 0 24px; }
+  a { color: var(--accent); }
+  .fill { background: #fff3a8; color: #000; padding: 0 4px; border-radius: 3px; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+  th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--rule); }
+  .scroll { overflow-x: auto; }
+  footer { margin-top: 48px; color: var(--muted); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<main>
+<h1>Privacy Policy</h1>
+<p class="meta">Arsenal Daily Bot · Effective September 4, 2026</p>
+
+<p>Arsenal Daily Bot (“the Service”) is an automated tool operated by Nebiyou Girma
+(“we”, “us”). Once a day it creates a short Arsenal FC news video and posts it to our own YouTube and
+TikTok accounts. This policy explains what data the Service handles. In short: <strong>it doesn’t collect
+personal data from viewers or the public, and it only connects to accounts we own.</strong></p>
+
+<h2>1. Who the Service is for</h2>
+<p>The Service is not a public app. Nobody can sign up for it, log in to it or connect their own account
+to it. The only people who authorise it are its operators, for their own channels.</p>
+
+<h2>2. Data we handle</h2>
+<div class="scroll">
+<table>
+  <tr><th>Data</th><th>Why</th><th>Where it’s kept</th></tr>
+  <tr>
+    <td><strong>TikTok authorisation</strong> for our own account: access and refresh tokens, plus the basic
+    profile info (open ID, display name, avatar) covered by the <code>user.info.basic</code> scope</td>
+    <td>To post videos to our own account (<code>video.publish</code> scope) and confirm which account
+    is posting</td>
+    <td>Encrypted GitHub Actions secrets and the operator’s own computer</td>
+  </tr>
+  <tr>
+    <td><strong>YouTube authorisation</strong> for our own channel: OAuth tokens limited to the
+    <code>youtube.upload</code> scope</td>
+    <td>To upload videos to our own channel</td>
+    <td>Encrypted GitHub Actions secrets and the operator’s own computer</td>
+  </tr>
+  <tr>
+    <td><strong>Public news headlines</strong> and summaries (from NewsAPI, BBC Sport and
+    football-data.org)</td>
+    <td>Source material for each day’s video</td>
+    <td>Temporary run files; the most recent batch is cached for testing</td>
+  </tr>
+  <tr>
+    <td><strong>Public Reddit posts</strong> from r/Gunners: post title, score, top comment text and link.
+    Usernames are not collected</td>
+    <td>To quote fan reaction word for word in the video</td>
+    <td>Temporary run files; the most recent batch is cached for testing</td>
+  </tr>
+  <tr>
+    <td><strong>Run logs:</strong> video title, upload IDs and article counts</td>
+    <td>To check each daily run worked</td>
+    <td>Last 30 runs, on GitHub</td>
+  </tr>
+</table>
+</div>
+<p>We don’t collect data about people who watch our videos. Views, likes and comments are handled by
+TikTok and YouTube under their own privacy policies. These pages use no cookies, analytics or
+tracking.</p>
+
+<h2>3. Services that process data for us</h2>
+<ul>
+  <li><strong>Anthropic (Claude API)</strong> receives the day’s public headlines and Reddit text to write
+  the video script.</li>
+  <li><strong>Microsoft Edge text-to-speech</strong> receives the script text to create the voiceover.</li>
+  <li><strong>Wikimedia Commons and Pexels</strong> receive photo search terms, such as a player’s name, to
+  find freely licensed background photos.</li>
+  <li><strong>GitHub</strong> runs the daily job and stores encrypted secrets and run logs.</li>
+  <li><strong>TikTok and YouTube</strong> receive the finished video, title, description and photo credits
+  when we publish.</li>
+</ul>
+<p>None of these services receive personal data about viewers. We don’t sell, rent or share data for
+advertising.</p>
+
+<h2>4. How long we keep data</h2>
+<p>Platform tokens are kept until we revoke them or stop using the Service. Run logs keep only the last 30
+runs. Scraped headlines and posts are overwritten on each run.</p>
+
+<h2>5. Revoking access and deleting data</h2>
+<p>We can revoke the Service’s access at any time: on TikTok under <em>Settings and privacy → Security
+→ Manage app permissions</em>, and on Google under <em>Google Account → Security → Third-party
+access</em>. Revoking access makes the stored tokens useless, and we then delete them from our
+secrets.</p>
+<p>If you’ve been quoted in a video and want it removed, email <a href="mailto:nebexg@yahoo.com">nebexg@yahoo.com</a>
+with a link and we’ll review and remove it where appropriate.</p>
+
+<h2>6. Children</h2>
+<p>The Service is not directed at children under 13 and does not knowingly collect data from them.</p>
+
+<h2>7. Security</h2>
+<p>Credentials are stored only as encrypted GitHub Actions secrets and in gitignored files on the
+operator’s computer. They are never committed to source control or shown in logs.</p>
+
+<h2>8. Changes to this policy</h2>
+<p>We’ll update this page if the Service starts handling data differently. The effective date above shows
+when it last changed.</p>
+
+<h2>9. Contact</h2>
+<p>Privacy questions or requests: <a href="mailto:nebexg@yahoo.com">nebexg@yahoo.com</a>.</p>
+
+<footer>See also our <a href="terms.html">Terms of Service</a>.</footer>
+</main>
+</body>
+</html>
