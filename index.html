@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arsenal Daily Bot</title>
+<meta name="description" content="A daily Arsenal FC news Short, made automatically and posted to our own YouTube and TikTok channels.">
+<style>
+  :root { --bg: #ffffff; --fg: #1d1d1f; --muted: #5f6368; --accent: #c8102e; --rule: #e3e3e3; --card: #f6f6f7; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #141416; --fg: #ececec; --muted: #a0a4ab; --accent: #ff4d5e; --rule: #2c2c30; --card: #1d1d21; }
+  }
+  body { background: var(--bg); color: var(--fg); margin: 0;
+         font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  header { background: #c8102e; color: #fff; }
+  header .inner { max-width: 720px; margin: 0 auto; padding: 40px 16px 32px; }
+  header h1 { margin: 0; font-size: 2.2rem; letter-spacing: 0.02em; }
+  header p { margin: 6px 0 0; font-size: 1.1rem; opacity: 0.92; }
+  main { max-width: 720px; margin: 0 auto; padding: 8px 16px 64px; }
+  h2 { font-size: 1.2rem; margin: 36px 0 10px; }
+  a { color: var(--accent); }
+  ol { padding-left: 1.3em; }
+  ol li { margin-bottom: 8px; }
+  .watch { display: flex; flex-wrap: wrap; gap: 12px; }
+  .watch a { flex: 1 1 200px; display: block; background: var(--card); border: 1px solid var(--rule);
+             border-radius: 10px; padding: 14px 16px; text-decoration: none; color: var(--fg); }
+  .watch a strong { display: block; color: var(--accent); }
+  .note { background: var(--card); border-left: 4px solid var(--accent); padding: 12px 16px; border-radius: 4px; }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--rule); color: var(--muted);
+           font-size: 0.95rem; }
+  footer a { margin-right: 16px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="inner">
+    <h1>Arsenal Daily Bot</h1>
+    <p>The day’s Arsenal FC news in one short video, made automatically every morning.</p>
+  </div>
+</header>
+<main>
+
+<h2>Where to watch</h2>
+<div class="watch">
+  <a href="https://www.youtube.com/@nebexscreen"><strong>YouTube Shorts</strong>@nebexscreen</a>
+  <a href="https://www.tiktok.com/@nebexscreen"><strong>TikTok</strong>@nebexscreen</a>
+</div>
+
+<h2>How it works</h2>
+<ol>
+  <li><strong>Gather the news.</strong> Collects the latest Arsenal headlines from public news sources, plus
+  public fan discussion from Reddit’s r/Gunners.</li>
+  <li><strong>Write the script.</strong> An AI model (Anthropic’s Claude) turns the headlines into a short,
+  five-slide summary.</li>
+  <li><strong>Record the voiceover.</strong> The script is read by a synthetic voice.</li>
+  <li><strong>Build the video.</strong> Each slide gets a background photo that’s free to reuse (from
+  Wikimedia Commons or Pexels), and every photographer and licence is credited in the video description.</li>
+  <li><strong>Publish.</strong> The finished vertical video is posted to our own YouTube and TikTok
+  accounts.</li>
+</ol>
+
+<h2>Our principles</h2>
+<ul>
+  <li><strong>Our own accounts only.</strong> The bot only connects to channels we own. It has no public
+  sign-ups and never posts on anyone else’s behalf.</li>
+  <li><strong>No viewer data.</strong> We don’t collect personal data from viewers. These pages use no
+  cookies or tracking.</li>
+  <li><strong>Real quotes only.</strong> Fan comments are quoted word for word from public Reddit posts.
+  If there isn’t a real quote, the video doesn’t show one.</li>
+  <li><strong>Credit where it’s due.</strong> Only freely licensed photos are used, and each one is
+  credited.</li>
+</ul>
+
+<p class="note">Arsenal Daily Bot is an independent fan project. It is <strong>not affiliated with, endorsed
+by or sponsored by</strong> Arsenal Football Club, the Premier League, TikTok, Google or YouTube.</p>
+
+<h2>Contact</h2>
+<p>Questions, corrections or removal requests:
+<a href="mailto:nebexg@yahoo.com">nebexg@yahoo.com</a> (Nebiyou Girma)</p>
+
+<footer>
+  <a href="terms.html">Terms of Service</a>
+  <a href="privacy.html">Privacy Policy</a>
+</footer>
+</main>
+</body>
+</html>
